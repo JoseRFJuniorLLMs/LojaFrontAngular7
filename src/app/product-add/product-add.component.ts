@@ -11,18 +11,16 @@ import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Valida
 export class ProductAddComponent implements OnInit {
 
   productForm: FormGroup;
-  prod_name:string='';
-  prod_desc:string='';
-  prod_price:number=null;
+  descricao:string='';
+  valor:string='';
   isLoadingResults = false;
 
   constructor(private router: Router, private api: ApiService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.productForm = this.formBuilder.group({
-      'prod_name' : [null, Validators.required],
-      'prod_desc' : [null, Validators.required],
-      'prod_price' : [null, Validators.required]
+      'descricao' : [null, Validators.required],
+      'valor' : [null, Validators.required]
     });
   }
 

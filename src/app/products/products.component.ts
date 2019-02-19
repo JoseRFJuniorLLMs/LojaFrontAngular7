@@ -13,7 +13,9 @@ import { Product } from '../product';
 
 export class ProductsComponent implements OnInit {
 
-  displayedColumns: string[] = ['descricao', 'preco'];
+  //displayedColumns: string[] = ['descricao','preco','embalagem','durabilidade','peso', 'rotulagem','status','grupo','cor','marca'];
+  displayedColumns: string[] = ['descricao','preco','peso','status','grupo','cor','marca'];
+  
   data: Product[] = [];
   isLoadingResults = true;
 

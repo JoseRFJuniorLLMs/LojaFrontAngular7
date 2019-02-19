@@ -3,9 +3,11 @@
        *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
+
   <div class="button-row">
     <a mat-flat-button color="primary" (click)="productDetails()"><mat-icon>info</mat-icon></a>
   </div>
+  
   <mat-card class="example-card">
     <form [formGroup]="productForm" (ngSubmit)="onFormSubmit(productForm.value)">
       <mat-form-field class="example-full-width">
